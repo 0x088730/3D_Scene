@@ -51,7 +51,7 @@ Scene.prototype.onLoad = function(path) {
 	this.water.onLoad(path);
 
 	this.birds = new Birds(this, this.gl);
-	this.birds.onLoad(path);
+	// this.birds.onLoad(path);
 
 	// set the initial position and angles of the camera
 	this.camera.translate(139.24, 92.14, -2062.80);
@@ -94,7 +94,7 @@ Scene.prototype.render = function() {
 		triangleCount += this.terrain.render(this.camera, this.frustum, Terrain.RenderTokens.TERRAIN);
 		triangleCount += this.terrain.render(this.camera, this.frustum, Terrain.RenderTokens.GRASS);
 		triangleCount += this.skyDome.render(this.camera);
-		triangleCount += this.birds.render(this.camera);
+		// triangleCount += this.birds.render(this.camera);
 		this.water.endReflectionRT();
 	}
 
@@ -148,7 +148,7 @@ Scene.prototype.getWater = function() {
 };
 
 Scene.prototype.getBirds = function() {
-	return this.birds;
+	// return this.birds;
 };
 
 Scene.prototype.toggleBoundingBoxes = function() {
