@@ -23,11 +23,11 @@
 
 
 TerrainConsts = {
-	TERRAIN_MAX_HEIGHT:		450, 
+	TERRAIN_MAX_HEIGHT:		Math.floor((Math.random() * (1001 - 450) + 450) / 50) * 50, 
 	WATER_MIN_HEIGHT:		-150, 
 	
 	TERRAIN_DEPTH_SCALE:	20, 
-	TERRAIN_WIDTH_SCALE:	20, 
+	TERRAIN_WIDTH_SCALE:	Math.floor(Math.random() * 9 + 2) * 10, 
 	
 	TILE_COLUMN_COUNT:		17, 
 	TILE_ROW_COUNT:			17, 
