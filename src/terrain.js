@@ -94,9 +94,21 @@ Terrain.RenderTokens = {
 };
 
 Terrain.prototype.onLoad = function(path) {
+	// HeightMap Random Control
+	const optionHeightMap = ['heightmap.jpg', 'heightmap_small.jpg']
+	const randomIndexEffect = Math.floor(Math.random() * optionHeightMap.length);
+	// DirtMap Random Control
+	const optionDirtMap = ['dirt.png', 'dirt1.png', 'dirt2.png']
+	const randomDirtIndex = Math.floor(Math.random() * optionDirtMap.length);
+	// FungusMap Random Control
+	const optionFungusMap = ['fungus.png', 'fungus1.png']
+	const randomFungusIndex = Math.floor(Math.random() * optionFungusMap.length);
+	// GrassLayer Random Control
+	const optionGrassLayerMap = ['grasslayer.png', 'grasslayer1.png', 'grasslayer2.png'];
+	const randomOptionGrassLayerIndex = Math.floor(Math.random() * optionGrassLayerMap.length);
 	this.datapath = path + 'Terrain/';
-	this.loadMaps('heightmap.jpg', 'watermap.jpg', 'randommap.png', 'coverage.png');
-	this.loadTextures('dirt.png', 'fungus.png', 'grasslayer.png', 'grassPack.png', 'watermap.jpg');
+	this.loadMaps(optionHeightMap[randomIndexEffect], 'watermap.jpg', 'randommap.png', 'coverage.png');
+	this.loadTextures(optionDirtMap[randomDirtIndex], optionFungusMap[randomFungusIndex], optionGrassLayerMap[randomOptionGrassLayerIndex], 'grassPack.png', 'watermap.jpg');
 	this.loadShader('TerrainShader.xml', this.renderers, 'terrain');
 	this.loadShader('GrassShader.xml', this.renderers, 'grass');
 	this.loadBoundingBoxShader();

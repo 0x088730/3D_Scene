@@ -2,7 +2,7 @@
   <Appearance>
 
     <Texture  type        = "TEXTURE_2D"
-              path        = "water.png"
+              path        = "water1.png"
               mipmap      = "true" > 
       <Wrap   s           = "REPEAT" 
               t           = "REPEAT" />
