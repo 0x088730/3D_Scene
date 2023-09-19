@@ -10,7 +10,8 @@
       <Filter mag         = "LINEAR" 
               min         = "LINEAR_MIPMAP_LINEAR"/> 
     </Texture>
-  </Appearance>
+
+  </Appearance>
   
 <Geometry type         = "TRIANGLES"
           indicesCount = "6">

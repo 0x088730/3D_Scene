@@ -33,7 +33,19 @@ SkyDome = function(scene, gl) {
 	this.triangleCount = 0;
 	this.renderer = null;
 	this.skyTimer = 0;
-	this.skyInfo = [0.33, 0.5, 1, 0.25];
+	const firstEffect = [0.136, 0.16, 0.208, Math.floor(Math.random() * 10 + 1) / 10];
+	const secondEffect = [0.115, 0.113, 0.134, Math.floor(Math.random() * 10 + 1) / 10];
+	const thirdEffect = [0.141, 0.155, 0.168, Math.floor(Math.random() * 10 + 1) / 10];
+	const fourthEffect = [0.218, 0.153, 0.113, Math.floor(Math.random() * 10 + 1) / 10];
+	const fifthEffect = [0.33, 0.5, 1, Math.floor(Math.random() * 10 + 1) / 10];
+	const sixthEffect = [0.221, 0.126, 0.094, Math.floor(Math.random() * 10 + 1) / 10];
+	const seventhEffect = [0.147, 0.153, 0.151, Math.floor(Math.random() * 10 + 1) / 10];
+	const optionsEffect = [firstEffect,secondEffect,thirdEffect,fourthEffect,fifthEffect,sixthEffect,seventhEffect]
+	const randomIndexEffect = Math.floor(Math.random() * optionsEffect.length);
+	const randomValue = optionsEffect[randomIndexEffect];
+
+	this.skyInfo = randomValue;
+
 };
 
 SkyDome.prototype.onLoad = function(path) {
