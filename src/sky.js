@@ -33,7 +33,8 @@ var step = 0.1;
 var numSteps = Math.floor((max - min) / step);
 var randIndex = Math.floor(Math.random() * (numSteps + 1));
 var randValue = min + (randIndex * step);
-console.log('randValue', randValue)
+var skyArray = ["clouds1.png", "clouds.png"];
+var randSkyIndex = Math.floor(Math.random() * skyArray.length);
 
 SkyDome = function (scene, gl) {
 	this.scene = scene;
@@ -267,7 +268,7 @@ SkyDome.prototype.loadShape = function (filename) {
 							wrapT: wrapT,
 							generateMipmap: mipmap
 						};
-						self.texture = new SglTexture2D(self.gl, self.datapath + path, opt);
+						self.texture = new SglTexture2D(self.gl, self.datapath + skyArray[randSkyIndex], opt);
 					}
 				}
 				// parse geometry
