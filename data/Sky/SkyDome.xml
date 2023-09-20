@@ -2,7 +2,7 @@
   <Appearance>
 
     <Texture  type        = "TEXTURE_2D"
-              path        = "clouds.png"
+              path        = "clouds1.png"
               mipmap      = "true" > 
       <Wrap   s           = "REPEAT" 
               t           = "REPEAT" />
@@ -10,7 +10,8 @@
       <Filter mag         = "LINEAR" 
               min         = "LINEAR_MIPMAP_LINEAR"/> 
     </Texture>
-  </Appearance>
+
+  </Appearance>
   
 <Geometry type         = "TRIANGLES"
           indicesCount = "656">

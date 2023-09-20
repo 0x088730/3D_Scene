@@ -94,20 +94,26 @@ Terrain.RenderTokens = {
 };
 
 Terrain.prototype.onLoad = function(path) {
-	// HeightMap Random Control
+	// HeightMap Random Control for Terrain HeightMap layer Control System
 	const optionHeightMap = ['heightmap.jpg', 'heightmap_small.jpg']
 	const randomIndexEffect = Math.floor(Math.random() * optionHeightMap.length);
-	// DirtMap Random Control
+	// DirtMap Random Control for Terrain DirtyLayer Control System
 	const optionDirtMap = ['dirt.png', 'dirt1.png', 'dirt2.png']
 	const randomDirtIndex = Math.floor(Math.random() * optionDirtMap.length);
-	// FungusMap Random Control
+	// FungusMap Random Control for Terrain FunusLayer Control System
 	const optionFungusMap = ['fungus.png', 'fungus1.png']
 	const randomFungusIndex = Math.floor(Math.random() * optionFungusMap.length);
-	// GrassLayer Random Control
+	// GrassLayer Random Control for Terrain Grass Control System
 	const optionGrassLayerMap = ['grasslayer.png', 'grasslayer1.png', 'grasslayer2.png'];
 	const randomOptionGrassLayerIndex = Math.floor(Math.random() * optionGrassLayerMap.length);
+	//Coverage Random Control for Terrain Valley Control System
+	const optionCoverageLayerMap = ['coverage.png', 'coverage1.png'];
+	const randomCoverLayerIndex = Math.floor(Math.random() * optionCoverageLayerMap.length);
+	//RandomMap Random Control for Terrain Map Control System
+	const optionRandomLayerMap = ['randommap.png', 'randommap1.png'];
+	const randomMapLayerIndex = Math.floor(Math.random() * optionRandomLayerMap.length);
 	this.datapath = path + 'Terrain/';
-	this.loadMaps(optionHeightMap[randomIndexEffect], 'watermap.jpg', 'randommap.png', 'coverage.png');
+	this.loadMaps(optionHeightMap[randomIndexEffect], 'watermap.jpg', optionRandomLayerMap[randomMapLayerIndex], optionCoverageLayerMap[randomCoverLayerIndex]);
 	this.loadTextures(optionDirtMap[randomDirtIndex], optionFungusMap[randomFungusIndex], optionGrassLayerMap[randomOptionGrassLayerIndex], 'grassPack.png', 'watermap.jpg');
 	this.loadShader('TerrainShader.xml', this.renderers, 'terrain');
 	this.loadShader('GrassShader.xml', this.renderers, 'grass');

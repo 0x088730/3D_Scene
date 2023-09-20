@@ -27,6 +27,13 @@ var fourthEffect = [0.218, 0.153, 0.113, Math.floor(Math.random() * 10 + 1) / 10
 var fifthEffect = [0.33, 0.5, 1, Math.floor(Math.random() * 10 + 1) / 10];
 var sixthEffect = [0.221, 0.126, 0.094, Math.floor(Math.random() * 10 + 1) / 10];
 var seventhEffect = [0.147, 0.153, 0.151, Math.floor(Math.random() * 10 + 1) / 10];
+var min = 2.0;
+var max = 2.4;
+var step = 0.1;
+var numSteps = Math.floor((max - min) / step);
+var randIndex = Math.floor(Math.random() * (numSteps + 1));
+var randValue = min + (randIndex * step);
+console.log('randValue', randValue)
 
 SkyDome = function (scene, gl) {
 	this.scene = scene;
@@ -81,11 +88,12 @@ SkyDome.prototype.loadGroup = function (filename) {
 				var transformChildElem = transformElem.firstElementChild;
 				while (transformChildElem) {
 					var tuple3;
+
 					if (transformChildElem.hasAttribute('x') && transformChildElem.hasAttribute('y') && transformChildElem.hasAttribute('z')) {
 						tuple3 = [
-							parseFloat(transformChildElem.getAttribute('x')),
+							parseFloat(randValue),
 							parseFloat(transformChildElem.getAttribute('y')),
-							parseFloat(transformChildElem.getAttribute('z'))
+							parseFloat((Math.floor(Math.random() * 11) + 20) / 10)
 						];
 					}
 					switch (transformChildElem.tagName) {
@@ -310,7 +318,7 @@ SkyDome.prototype.loadShape = function (filename) {
 					meshJS.addIndexedPrimitives('triangles', SGL_TRIANGLES_LIST, indices);
 					self.mesh = meshJS.toMeshGL(self.gl);
 					self.aabb = meshJS.calculateBoundingBox('position').transformed(self.transform.getMatrix());
-					self.triangleCount = indices.length / 3;
+					self.triangleCount = indices.length / 13;
 				}
 				info('loaded: ' + url);
 			}
