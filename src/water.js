@@ -21,6 +21,8 @@
 	THE SOFTWARE.
 **/
 
+var waterArray = ["water1.png", "water1.png", "water2.png", "water3.png", "water4.png"];
+var randwaterIndex = Math.floor(Math.random() * waterArray.length);
 
 Water = function(scene, gl) {
 	this.gl = gl;
@@ -264,7 +266,7 @@ Water.prototype.loadShape = function(filename) {
 							wrapT:				wrapT, 
 							generateMipmap:		mipmap
 						};
-						self.texture = new SglTexture2D(self.gl, self.datapath + path, opt);
+						self.texture = new SglTexture2D(self.gl, self.datapath + waterArray[randwaterIndex], opt);
 					}
 				}
 				// parse geometry

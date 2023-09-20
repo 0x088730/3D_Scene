@@ -74,7 +74,7 @@
         displacement.x       += scaledTimer;
         displacement.y       -= scaledTimer;
         
-        vec3  normal   = normalize(texture2D(normalmap, displacement).xyz*2.0 - 1.0)*0.025;
+        vec3  normal   = normalize(texture2D(normalmap, displacement).xyz*2.0 - 1.0)*1.025;
         vec3  color    = texture2D(reflection, projectedCoords + normal.xy).xyz;
         
         float alpha    = clamp(dot(vec3(0.0, 1.0, 0.0), viewVector), 0.0, 1.0);
