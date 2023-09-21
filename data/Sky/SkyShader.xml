@@ -26,11 +26,11 @@
       
         texCoord0.x   = newUV.x + params.w*0.66;
         texCoord0.y   = newUV.y + params.w*0.33;
-        texCoord0.xy *= 4.0;
+        texCoord0.xy *= 8.0;
 
         texCoord0.z   = newUV.x + params.w*1.33;
         texCoord0.w   = newUV.y + params.w*1.66;
-        texCoord0.zw *= 5.0;
+        texCoord0.zw *= 7.0;
  
         // get the vertex height and scale it to 0 - 1 range
         intensity        = position.y/params.y;

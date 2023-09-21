@@ -33,7 +33,7 @@ var step = 0.1;
 var numSteps = Math.floor((max - min) / step);
 var randIndex = Math.floor(Math.random() * (numSteps + 1));
 var randValue = min + (randIndex * step);
-var skyArray = ["clouds1.png", "clouds.png"];
+var skyArray = ["clouds1.png"];
 var randSkyIndex = Math.floor(Math.random() * skyArray.length);
 
 SkyDome = function (scene, gl) {
@@ -336,6 +336,10 @@ SkyDome.prototype.loadShape = function (filename) {
 SkyDome.prototype.update = function (deltaTime) {
 	this.skyTimer += 0.0125 * this.skyInfo[3] * deltaTime;
 };
+const optionsDirectEffect = [-70, -60, -20, 20, 40, 60, 90]
+const randomDirectIndexEffect = Math.floor(Math.random() * optionsDirectEffect.length);
+const randomDirectValue = optionsDirectEffect[randomDirectIndexEffect];
+
 
 SkyDome.prototype.render = function (camera) {
 	if (this.isReady()) {
@@ -345,8 +349,8 @@ SkyDome.prototype.render = function (camera) {
 		var xform = this.scene.getApp().getTransformStack();
 
 		xform.projection.loadIdentity();
-		xform.projection.perspective(sglDegToRad(90), w / h, 25, 12000);
-
+		xform.projection.perspective(sglDegToRad(randomDirectValue), w / h, 25, 12000);
+		console.log(xform.projection)
 		xform.model.load(this.transform.getMatrix());
 
 		this.renderer.begin();
