@@ -32,7 +32,7 @@
         vec3 correctPosition    = regularPosition + translation;
         
         texCoordOut0       = waterMatrix * vec4(correctPosition, 1.0);
-        texCoordOut1       = texCoord0*15.0;
+        texCoordOut1       = texCoord0*35.0;
         texCoordOut2       = camera - correctPosition;
         texCoordOut3       = correctPosition;
         gl_Position        = transformMatrix*vec4(regularPosition, 1.0);
