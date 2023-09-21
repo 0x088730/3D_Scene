@@ -1,5 +1,5 @@
 /**
-	@preserve Copyright (c) 2011 Humu humu2009@gmail.com
+	@preserve Copyright (c) 2011 Noah royalsceptre88@gmail.com
 	This file is freely distributable under the terms of the MIT license.
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
