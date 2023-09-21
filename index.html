@@ -1,56 +1,51 @@
 <html>
+	<head>
+		<title>WebGL Nature Scene</title>
+		<script type="text/javascript" src="lib/spidergl.js"></script>
+		<script type="text/javascript" src="src/app.js"></script>
+		<script type="text/javascript" src="src/ui.js"></script>
+		<script type="text/javascript" src="src/scene.js"></script>
+		<script type="text/javascript" src="src/sky.js"></script>
+		<script type="text/javascript" src="src/terrain.js"></script>
+		<script type="text/javascript" src="src/water.js"></script>
+		<script type="text/javascript" src="src/birds.js"></script>
+		<script type="text/javascript" src="src/boid.js"></script>
+		<script type="text/javascript" src="src/portal.js"></script>
+		<script type="text/javascript" src="src/terraincell.js"></script>
+		<script type="text/javascript" src="src/grasscell.js"></script>
+		<script type="text/javascript" src="src/heightmap.js"></script>
+		<script type="text/javascript" src="src/transform.js"></script>
+		<script type="text/javascript" src="src/util.js"></script>
+		<script type="text/javascript" src="src/log.js"></script>
+	</head>
+	<style>
+		* {
+			margin: 0;
+		}
+	</style>
+	<body>
+		<table border="0">
+			<tr align="left">
+				<td>
+					<div
+						style="width:100%; height: 100%; margin:-8px; position:relative; font-size: 9pt; color: #000000; cursor: default;">
+						<canvas id="SCENE_CANVAS"></canvas>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		var canvas = document.querySelector('canvas');
+		fitToContainer(canvas);
 
-<head>
-	<title>WebGL Nature Scene</title>
-	<script type="text/javascript" src="lib/spidergl.js"></script>
-	<script type="text/javascript" src="src/app.js"></script>
-	<script type="text/javascript" src="src/ui.js"></script>
-	<script type="text/javascript" src="src/scene.js"></script>
-	<script type="text/javascript" src="src/sky.js"></script>
-	<script type="text/javascript" src="src/terrain.js"></script>
-	<script type="text/javascript" src="src/water.js"></script>
-	<script type="text/javascript" src="src/birds.js"></script>
-	<script type="text/javascript" src="src/boid.js"></script>
-	<script type="text/javascript" src="src/portal.js"></script>
-	<script type="text/javascript" src="src/terraincell.js"></script>
-	<script type="text/javascript" src="src/grasscell.js"></script>
-	<script type="text/javascript" src="src/heightmap.js"></script>
-	<script type="text/javascript" src="src/transform.js"></script>
-	<script type="text/javascript" src="src/util.js"></script>
-	<script type="text/javascript" src="src/log.js"></script>
-</head>
-<style>
-	* {
-		margin: 0;
-	}
-</style>
-
-<body>
-	<table border="0">
-
-		<tr align="left">
-			<td>
-				<div
-					style="width:100%; height: 100%; margin:-8px; position:relative; font-size: 9pt; color: #000000; cursor: default;">
-					<canvas id="SCENE_CANVAS"></canvas>
-				</div>
-			</td>
-		</tr>
-
-	</table>
-</body>
-<script>
-	var canvas = document.querySelector('canvas');
-	fitToContainer(canvas);
-
-	function fitToContainer(canvas) {
-		// Make it visually fill the positioned parent
-		canvas.style.width = '100vw';
-		canvas.style.height = '100vh';
-		// ...then set the internal size to match
-		canvas.width = canvas.offsetWidth;
-		canvas.height = canvas.offsetHeight;
-	}
-</script>
-
+		function fitToContainer(canvas) {
+			// Make it visually fill the positioned parent
+			canvas.style.width = '100vw';
+			canvas.style.height = '100vh';
+			// ...then set the internal size to match
+			canvas.width = canvas.offsetWidth;
+			canvas.height = canvas.offsetHeight;
+		}
+	</script>
 </html>
