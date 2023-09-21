@@ -350,7 +350,6 @@ SkyDome.prototype.render = function (camera) {
 
 		xform.projection.loadIdentity();
 		xform.projection.perspective(sglDegToRad(randomDirectValue), w / h, 25, 12000);
-		console.log(xform.projection)
 		xform.model.load(this.transform.getMatrix());
 
 		this.renderer.begin();

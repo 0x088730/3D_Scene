@@ -92,17 +92,14 @@ Water.prototype.loadGroup = function(filename) {
 					case 'Translations':
 						if(tuple3)
 							self.transform.setTranslation(tuple3);
-						console.log("1+++++++")
 						break;
 					case 'Rotations':
 						if(tuple3)
 							self.transform.setRotation(tuple3);
-							console.log("2+++++++", tuple3)
 						break;
 					case 'Scales':
 						if(tuple3)
 							self.transform.setScale(tuple3);
-							console.log("3+++++++")
 						break;
 					default:
 						break;					
