@@ -34,7 +34,7 @@
  
         // get the vertex height and scale it to 0 - 1 range
         intensity        = position.y/params.y;
-        intensity        = exp(clamp(intensity, 0.0, 1.0))/2.2;
+        intensity        = exp(clamp(intensity, 0.0, 1.0))/3.2;
         intensitySqrd    = intensity*intensity;
    
         gl_Position      = transformMatrix * vec4(position, 1.0);

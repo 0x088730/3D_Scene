@@ -33,7 +33,7 @@ var step = 0.1;
 var numSteps = Math.floor((max - min) / step);
 var randIndex = Math.floor(Math.random() * (numSteps + 1));
 var randValue = min + (randIndex * step);
-var skyArray = ["clouds1.png"];
+var skyArray = ["clouds1.png", "clouds.png"];
 var randSkyIndex = Math.floor(Math.random() * skyArray.length);
 
 SkyDome = function (scene, gl) {
