@@ -21,7 +21,7 @@
 	THE SOFTWARE.
 **/
 
-var waterArray = ["water1.png", "water1.png", "water2.png", "water3.png", "water4.png"];
+var waterArray = ["water1.png", "water2.png", "water3.png", "water4.png"];
 var randwaterIndex = Math.floor(Math.random() * waterArray.length);
 
 Water = function(scene, gl) {
@@ -420,7 +420,6 @@ Water.prototype.render = function(camera) {
 		this.gl.frontFace(this.gl.CCW);
 		this.gl.enable(this.gl.BLEND);
 		this.gl.blendFuncSeparate(this.gl.SRC_ALPHA, this.gl.ONE_MINUS_SRC_ALPHA, this.gl.ONE, this.gl.ONE);
-
 		var uniforms = {};
 		uniforms['transformMatrix'] = xform.modelViewProjectionMatrix;
 		uniforms['translation'] = this.translation;

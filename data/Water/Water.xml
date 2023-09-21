@@ -2,7 +2,7 @@
   <Appearance>
 
     <Texture  type        = "TEXTURE_2D"
-              path        = "water1.png"
+              path        = "water.png"
               mipmap      = "true" > 
       <Wrap   s           = "REPEAT" 
               t           = "REPEAT" />
@@ -16,7 +16,7 @@
 <Geometry type         = "TRIANGLES"
           indicesCount = "6">
   <TexCoords id   = "0"
-             size = "2">
+             size = "4">
     <RawData length = "8">0.000000 0.999999 4.000000 1.000000 0.000000 -3.000000 4.000000 -3.000000</RawData>
   </TexCoords>
   <Vertices>

@@ -69,7 +69,7 @@
         vec2  uvDepthCoords   = vec2((texCoordOut3.x - terrainInfo.x)/terrainInfo.z,
                                      (texCoordOut3.z - terrainInfo.y)/terrainInfo.w);
              
-        float scaledTimer     = elapsedTime*0.05;
+        float scaledTimer     = elapsedTime*0.02;
         
         displacement.x       += scaledTimer;
         displacement.y       -= scaledTimer;
